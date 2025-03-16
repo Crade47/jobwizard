@@ -18,13 +18,13 @@ import { LogIn } from 'lucide-react';
 export function AppSidebar() {
     const { isSignedIn } = useAuth();
     const sidebar_items = sidebarNavigation.filter(
-        item => !item.requiresAuth || !isSignedIn
+        item => !item.requiresAuth || isSignedIn
     )
     return (
         <Sidebar>
             <SidebarHeader >
                 <div className='flex gap-2'>
-                    <Image
+                    <Image 
                         src={Logo}
                         //width={500}
                         //height={500}
